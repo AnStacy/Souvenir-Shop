@@ -2,13 +2,12 @@
   max-width: 1400px;
   margin: auto;
   padding: 50px, 30px;
-  box-sizing: border-box;
 }
 
 .title {
   font-size: 55px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin: 30px;
   text-align: center;
 }
 
