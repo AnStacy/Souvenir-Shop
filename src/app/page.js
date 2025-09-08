@@ -1,3 +1,78 @@
+"use client";
+
+import styles from "./page.module.css";
+
+const PRODUCTS = [
+  {
+    id: "doll",
+    name: "Ukrainian Doll",
+    price: 24.99,
+    image: "/doll.png",
+    stock: 8,
+  },
+  {
+    id: "tote",
+    name: "Ukrainian Tote",
+    price: 23.99,
+    image: "/tote.png",
+    stock: 7,
+  },
+  {
+    id: "keychain",
+    name: "Keychain",
+    price: 11.99,
+    image: "/keychain.png",
+    stock: 18,
+  },
+  {
+    id: "earrings",
+    name: "Earrings",
+    price: 15.99,
+    image: "/earrings.png",
+    stock: 12,
+  },
+  {
+    id: "mug",
+    name: "Mug",
+    price: 9.99,
+    image: "/mug.png",
+    stock: 24,
+  },
+  {
+    id: "magnet",
+    name: "Fridge Magnet",
+    price: 5.99,
+    image: "/magnet.png",
+    stock: 29,
+  },
+];
+
+const fmt = (n) =>
+  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
+    n
+  );
+
 export default function Home() {
-  return <div>Main Page</div>;
+  return (
+    <main className={styles.container}>
+      <h1 className={styles.title}>Souvenirs</h1>
+      <ul className={styles.grid}>
+        {PRODUCTS.map((p) => (
+          <li key={p.id} className={styles.card}>
+            <img src={p.image} alt={p.name} className={styles.image} />
+            <div className={styles.info}>
+              <h2 className={styles.name}>{p.name}</h2>
+              <p className={styles.price}>{fmt(p.price)}</p>
+              <button
+                className={styles.btn}
+                onClick={() => (window.location.href = "/cart")}
+              >
+                Add to cart
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
 }
