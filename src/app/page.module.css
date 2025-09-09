@@ -4,11 +4,27 @@
   padding: 50px, 30px;
 }
 
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: auto;
+}
+
 .title {
   font-size: 55px;
   font-weight: 700;
+  color: #d8e2dc;
   margin: 30px;
-  text-align: center;
+}
+
+.cardhref {
+  font-size: 30px;
+  font-weight: 700;
+  color: #d8e2dc;
+  text-decoration: none;
+  margin: 30px;
 }
 
 .grid {
@@ -67,4 +83,134 @@
 
 .btn:hover {
   opacity: 0.9;
+}
+
+/* Styles for Cart */
+
+.empty {
+  margin: 20px 0;
+  font-size: 35px;
+}
+
+.link {
+  font-size: 30px;
+  font-weight: 700;
+  background-color: #d8e2dc;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.linkText {
+  padding: 0 50px;
+  color: #17301c;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 45px;
+}
+
+.item {
+  display: grid;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  background-color: #d8e2dc;
+}
+
+.thumb {
+  display: block;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.qtyRow {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 10px;
+}
+
+.qtyBtn {
+  width: 35px;
+  height: 35px;
+  border: none;
+  font-size: 25px;
+  background-color: #17301c;
+  color: #d8e2dc;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.qty {
+  font-size: 25px;
+  font-weight: 700;
+  padding: 20px;
+  color: #17301c;
+  min-width: 30px;
+}
+
+.remove {
+  background-color: #17301c;
+  color: #d8e2dc;
+  font-size: 20px;
+  padding: 5px 30px;
+  border-radius: 50px;
+}
+
+.lineTotal {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 300;
+  color: #17301c;
+}
+
+.summary {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 20px 0;
+  border-top: 1px solid #d8e2dc;
+}
+
+.total {
+  font-weight: 700;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+}
+
+.primary,
+.secondary {
+  font-size: 35px;
+  font-weight: 700;
+  color: #17301c;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 40px;
+  border-radius: 50px;
+}
+
+.primary {
+  padding: 0 50px;
+  background-color: #8b2635;
+}
+
+.secondary {
+  padding: 0 50px;
+  background-color: #9db5b2;
 }

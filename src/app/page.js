@@ -1,6 +1,8 @@
 "use client";
 
 import styles from "./page.module.css";
+import { useCart } from "./context/CartContext";
+import Link from "next/link";
 
 const PRODUCTS = [
   {
@@ -53,9 +55,18 @@ const fmt = (n) =>
   );
 
 export default function Home() {
+  const { addToCart } = useCart();
+
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>Souvenirs</h1>
+      <div className={styles.navigation}>
+        <Link className={styles.title} href="/">
+          Souvenirs
+        </Link>
+        <Link className={styles.cardhref} href="./cart">
+          Card
+        </Link>
+      </div>
       <ul className={styles.grid}>
         {PRODUCTS.map((p) => (
           <li key={p.id} className={styles.card}>
@@ -63,10 +74,7 @@ export default function Home() {
             <div className={styles.info}>
               <h2 className={styles.name}>{p.name}</h2>
               <p className={styles.price}>{fmt(p.price)}</p>
-              <button
-                className={styles.btn}
-                onClick={() => (window.location.href = "/cart")}
-              >
+              <button className={styles.btn} onClick={() => addToCart(p, 1)}>
                 Add to cart
               </button>
             </div>
