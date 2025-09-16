@@ -7,11 +7,13 @@
   --btn-empty-color: #d8e2dc;
   --btn-text-color: #d8e2dc;
   --btn-cart-primary: #8b2635;
-  --btn-cart-secondary: #9db5b2;
+  --btn-cart-secondary: #eff5f4;
+  --input-background-color: #faf8f8;
+  --input-error-color: #8b2635;
 
   --fs-title: clamp(28px, 6vw, 66px);
   --fs-h2: clamp(20px, 4.8vw, 30px);
-  --fs-body: 16px;
+  --fs-body: clamp(16px, 3.2vw, 24px);
   --fs-price: clamp(18px, 4.2vw, 25px);
   --fs-total-price: clamp(22px, 4.2vw, 28px);
   --fs-btn: clamp(16px, 4.2vw, 20px);

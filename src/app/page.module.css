@@ -225,6 +225,48 @@
 
 .gridCheckout {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.sectionTitle {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin: var(--space-1) 0;
+  color: var(--secondary-text-color);
+}
+
+.label {
+  display: block;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  margin: var(--space-1) 0;
+  color: var(--secondary-text-color);
+}
+
+.input {
+  width: 100%;
+  margin-top: 5px;
+  padding: 3px 12px;
+  border: 1px solid var(--btn-color);
+  border-radius: 50px;
+  outline: none;
+  background-color: var(--input-background-color);
+  color: #111;
+}
+
+.input:focus {
+  border-color: var(--secondary-text-color);
+  box-shadow: 0 0 0 3px rgba(23, 48, 28, 0.15);
+}
+
+.inputError {
+  border-color: var(--input-error-color) !important;
+}
+
+.error {
+  display: block;
+  margin-top: 4px;
+  color: var(--input-error-color);
+  font-size: var(--fs-body);
 }
