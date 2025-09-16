@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useCart } from "../context/CartContext";
 import styles from "../page.module.css";
 
@@ -108,9 +108,8 @@ export default function CheckoutPage() {
     <main className={styles.container}>
       <h1 className={styles.title}>Checkout</h1>
 
-      <div className={styles.grid}>
-        {/* тут стиль .card */}
-        <section className={styles}>
+      <div className={styles.gridCheckout}>
+        <section className={styles.card}>
           <h2 className={styles.sectionTitle}>Contacts</h2>
 
           {/* Name */}
@@ -277,8 +276,7 @@ export default function CheckoutPage() {
           )}
         </section>
 
-        {/* тут стиль .card */}
-        <aside className="styles">
+        <aside className="styles.card">
           <h2 className={styles.sectionTitle}>Order Summary</h2>
           {items.length === 0 ? (
             <p className={styles.empty}> Cart is empty.</p>

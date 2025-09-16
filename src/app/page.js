@@ -63,7 +63,7 @@ export default function Home() {
         <Link className={styles.title} href="/">
           Souvenirs
         </Link>
-        <Link className={styles.cardhref} href="./cart">
+        <Link className={styles.cardHref} href="./cart">
           Card
         </Link>
       </div>

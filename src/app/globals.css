@@ -1,38 +1,68 @@
 :root {
-  /* --background: #ffffff;
-  --foreground: #17301c; */
-}
+  --background: #17301c;
+  --card-background: #d8e2dc;
+  --primary-text-color: #d8e2dc;
+  --secondary-text-color: #17301c;
+  --btn-color: #17301c;
+  --btn-empty-color: #d8e2dc;
+  --btn-text-color: #d8e2dc;
+  --btn-cart-primary: #8b2635;
+  --btn-cart-secondary: #9db5b2;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #17301c;
-    --foreground: #d8e2dc;
-  }
+  --fs-title: clamp(28px, 6vw, 66px);
+  --fs-h2: clamp(20px, 4.8vw, 30px);
+  --fs-body: 16px;
+  --fs-price: clamp(18px, 4.2vw, 25px);
+  --fs-total-price: clamp(22px, 4.2vw, 28px);
+  --fs-btn: clamp(16px, 4.2vw, 20px);
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 52px;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
+  line-height: 1.5;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+  border: none;
 }
 
 a {
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  cursor: pointer;
 }

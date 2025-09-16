@@ -1,16 +1,11 @@
-// import { Geist, Geist_Mono } from "next/font/google";
+import { Cinzel } from "next/font/google";
 import { CartProvider } from "./context/CartContext";
 import "./globals.css";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "Souvenir Shop",
@@ -19,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={cinzel.className}>
       <body>
         <CartProvider>{children}</CartProvider>
       </body>
