@@ -66,12 +66,10 @@ export default function CartPage() {
           </li>
         ))}
       </ul>
-
       <div className={styles.summary}>
         <p>Subtotal: </p>
         <p className="styles.total">{fmt(totals.subtotal)}</p>
       </div>
-
       <div className={styles.actions}>
         <Link className={styles.secondary} href="/">
           Continue Shopping

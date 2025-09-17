@@ -353,6 +353,12 @@
     padding: 0 var(--space-5);
   }
 
+  .navigation {
+    flex-wrap: nowrap;
+    gap: var(--space-6);
+    justify-content: space-between;
+  }
+
   .grid,
   .list {
     grid-template-columns: repeat(2, minmax(280px, 1fr));
