@@ -1,15 +1,18 @@
 :root {
   --background: #17301c;
-  --card-background: #d8e2dc;
+  /* --card-background: #d8e2dc; */
+  --card-background: #b9c0ba;
   --primary-text-color: #d8e2dc;
   --secondary-text-color: #17301c;
   --btn-color: #17301c;
   --btn-empty-color: #d8e2dc;
   --btn-text-color: #d8e2dc;
-  --btn-cart-primary: #8b2635;
-  --btn-cart-secondary: #eff5f4;
+  --btn-cart-primary: #f02d3a;
+  --btn-cart-secondary: #b9c0ba;
   --input-background-color: #faf8f8;
-  --input-error-color: #8b2635;
+  --input-error-color: #f02d3a;
+  --checkout-pay-btn: #2176ae;
+  --checkout-total-price: #b9c0ba;
 
   --fs-title: clamp(28px, 6vw, 66px);
   --fs-h2: clamp(20px, 4.8vw, 30px);

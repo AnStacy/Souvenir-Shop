@@ -124,7 +124,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space1);
+  gap: var(--space-1);
   padding: var(--space-2);
   border-radius: 25px;
   background-color: var(--card-background);
@@ -175,7 +175,7 @@
 .lineTotal {
   text-align: center;
   font-size: var(--fs-total-price);
-  font-weight: 300;
+  font-weight: 700;
   color: var(--secondary-text-color);
 }
 
@@ -197,7 +197,6 @@
   margin-top: var(--space-1);
   display: flex;
   flex-wrap: wrap;
-  /* gap: var(--space-3); */
   justify-content: space-between;
 }
 
@@ -218,6 +217,7 @@
 }
 
 .secondary {
+  color: var(--secondary-text-color);
   background-color: var(--btn-cart-secondary);
 }
 
@@ -240,14 +240,14 @@
   display: block;
   font-size: var(--fs-body);
   font-weight: 500;
-  margin: var(--space-1) 0;
+  margin: var(--space-1);
   color: var(--secondary-text-color);
 }
 
 .input {
   width: 100%;
   margin-top: 5px;
-  padding: 3px 12px;
+  padding: 6px 12px;
   border: 1px solid var(--btn-color);
   border-radius: 50px;
   outline: none;
@@ -269,4 +269,145 @@
   margin-top: 4px;
   color: var(--input-error-color);
   font-size: var(--fs-body);
+}
+
+.note {
+  text-align: center;
+}
+
+.payBtn {
+  width: 100%;
+  margin: var(--space-2) 0;
+  padding: 8px 12px;
+  border-radius: 50px;
+  background-color: var(--checkout-pay-btn);
+  color: var(--primary-text-color);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  letter-spacing: 2;
+}
+
+.payBtn:hover {
+  opacity: 0.9;
+}
+
+.payBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.noteSmall {
+  color: var(--input-error-color);
+  font-size: var(--fs-body);
+  text-align: center;
+}
+
+.sectionTitle {
+  color: var(--primary-text-color);
+  text-align: center;
+}
+
+.totals {
+  margin: 0 var(--space-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 12px;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  background-color: var(--checkout-total-price);
+  color: var(--secondary-text-color);
+  border-radius: 50px;
+}
+
+.summaryList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.summaryItem {
+  display: flex;
+  text-align: center;
+  padding: var(--space-2);
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: var(--card-background);
+  gap: var(--space-1);
+}
+
+.itemName {
+  color: var(--secondary-text-color);
+  font-size: var(--fs-price);
+  font-weight: 300;
+}
+
+.itemLineTotal {
+  font-size: var(--fs-price);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-5);
+  }
+
+  .grid,
+  .list {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: var(--space-5);
+  }
+
+  .card {
+    padding: var(--space-3);
+  }
+
+  .gridCheckout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+  }
+
+  .totals {
+    margin: 0;
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-6);
+  }
+
+  .grid,
+  .list {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: var(--space-3);
+  }
+
+  .card {
+    padding: var(--space-1);
+  }
+
+  .gridCheckout {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-5);
+  }
+
+  .totals {
+    margin: 0;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .actions {
+    gap: var(--space-3);
+    justify-content: space-between;
+  }
+
+  .primary,
+  .secondary,
+  .payBtn {
+    padding: 10px 22px;
+    min-height: 48px;
+  }
 }

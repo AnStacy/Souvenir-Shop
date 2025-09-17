@@ -251,10 +251,10 @@ export default function CheckoutPage() {
             )}
           </label>
 
-          {/* If cart is empty */}
-          {items.length === 0 && (
-            <div className={styles.note}>
-              Your cart is empty — add products to continue.
+          {!isValid && (
+            <div className={styles.noteSmall}>
+              Fill out the form correctly and make sure there are items in your
+              cart.
             </div>
           )}
 
@@ -268,10 +268,11 @@ export default function CheckoutPage() {
           >
             Pay
           </button>
-          {!isValid && (
-            <div className={styles.noteSmall}>
-              Fill out the form correctly and make sure there are items in your
-              cart.
+
+          {/* If cart is empty */}
+          {items.length === 0 && (
+            <div className={styles.note}>
+              Your cart is empty — add products to continue.
             </div>
           )}
         </section>
@@ -282,30 +283,30 @@ export default function CheckoutPage() {
             <p className={styles.empty}> Cart is empty.</p>
           ) : (
             <>
+              <div className={styles.totals}>
+                <p>Subtotal</p>
+                <div className={styles.totalNum}>{fmt(totals.subtotal)}</div>
+              </div>
+
               <ul className={styles.summaryList}>
                 {items.map((it) => (
                   <li key={it.id} className={styles.summaryItem}>
                     <div className={styles.summaryRowLeft}>
                       <img
-                        className={styles.checkoutThumb}
+                        className={styles.thumb}
                         src={it.image}
                         alt={it.name}
                       />
                       <div>
                         <div className={styles.itemName}>{it.name}</div>
                         <div className={styles.itemLineTotal}>
-                          Items: {it.qty} Price: {fmt(it.price * it.qty)}
+                          Total price: {fmt(it.price * it.qty)}
                         </div>
                       </div>
                     </div>
                   </li>
                 ))}
               </ul>
-
-              <div className={styles.totals}>
-                <p>Subtotal</p>
-                <div className={styles.totalNum}>{fmt(totals.subtotal)}</div>
-              </div>
             </>
           )}
         </aside>
