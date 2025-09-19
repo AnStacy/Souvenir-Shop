@@ -3,6 +3,7 @@
 import styles from "./page.module.css";
 import { useCart } from "./context/CartContext";
 import Link from "next/link";
+import Image from "next/image";
 
 const PRODUCTS = [
   {
@@ -64,13 +65,19 @@ export default function Home() {
           Souvenirs
         </Link>
         <Link className={styles.cardHref} href="./cart">
-          Card
+          Cart
         </Link>
       </div>
       <ul className={styles.grid}>
         {PRODUCTS.map((p) => (
           <li key={p.id} className={styles.card}>
-            <img src={p.image} alt={p.name} className={styles.image} />
+            <Image
+              src={p.image}
+              alt={p.name}
+              className={styles.image}
+              width={400}
+              height={400}
+            />
             <div className={styles.info}>
               <h2 className={styles.name}>{p.name}</h2>
               <p className={styles.price}>{fmt(p.price)}</p>

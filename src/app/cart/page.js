@@ -3,6 +3,7 @@
 import Link from "next/link";
 import styles from "../page.module.css";
 import { useCart } from "../context/CartContext";
+import Image from "next/image";
 
 const fmt = (n) =>
   new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
@@ -30,7 +31,13 @@ export default function CartPage() {
       <ul className={styles.list}>
         {items.map((it) => (
           <li key={it.id} className={styles.item}>
-            <img src={it.image} alt={it.name} className={styles.thumb} />
+            <Image
+              src={it.image}
+              alt={it.name}
+              className={styles.thumb}
+              width={400}
+              height={400}
+            />
 
             <div className={styles.info}>
               <h2 className={styles.name}>{it.name}</h2>
